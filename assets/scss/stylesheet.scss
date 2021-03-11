@@ -1,0 +1,55 @@
+// @use 'variables' as *; ничем не отличается от @import 'variables'
+@use 'variables' as *;
+
+@use "body";
+
+@use '_intro';
+
+@use '_header';
+
+@use '_navigation';
+
+@use '_nav-toggle';
+
+@use '_button';
+
+@use '_slider';
+
+@use '_section';
+
+@use '_cards';
+
+@use '_statistics';
+
+@use '_services';
+
+@use '_devices';
+
+@use '_wedo';
+
+@use '_accordion';
+
+@use '_reviews';
+
+@use '_social';
+
+@use '_logos';
+
+@use '_works';
+
+@use '_clients';
+
+@use '_blog';
+
+@use '_map';
+
+@use '_footer';
+
+@use '_blogs';
+
+@use '_subscribe';
+
+@use '_instagram';
+
+@use '_copyright';
+

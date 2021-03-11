@@ -1,0 +1,66 @@
+@use 'variables' as *;
+
+.statistics {
+  background-color: $turquoise;
+
+  .stat {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include for-tablet-landscape-up {
+      justify-content: center;
+    }
+
+    .stat_item {
+      flex: 1 1 0;
+      padding: 70px 25px;
+      border-left: 1px solid $light-turqoise;
+      text-align: center;
+      color: #fff;
+
+      @include for-tablet-landscape-up {
+        flex: none;
+        width: 33.33333%;
+        padding: 30px 0;
+
+        border: none;
+      }
+
+      @include for-phone-only {
+        width: 100%;
+
+        border-top: 1px solid #b5eae0;
+      }
+
+      &:first-child {
+        @include for-phone-only {
+          border-top: none;
+        }
+      }
+
+      &:last-child {
+        border-right: 1px solid $light-turqoise;
+
+        @include for-tablet-landscape-up {
+          border-right: none;
+        }
+      }
+
+      .stat_count {
+        margin-bottom: 10px;
+        font-size: 72px;
+        font-weight: 700;
+        line-height: 1;
+
+        @include for-phone-only {
+          font-size: 52px;
+        }
+      }
+
+      .stat_text {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

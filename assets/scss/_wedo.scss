@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+.wedo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  .wedo_item {
+    width: 50%;
+    padding: 0 15px;
+
+    @include for-tablet-portrait-up {
+      width: 100%;
+    }
+
+    .wedo_img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+  }
+}

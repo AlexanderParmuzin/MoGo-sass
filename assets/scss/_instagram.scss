@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+.instagram {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include for-tablet-landscape-up {
+    justify-content: flex-start;
+  }
+
+  .instagram_item {
+    width: 33%;
+    border-bottom: 1px solid #fff;
+
+    @include for-tablet-landscape-up {
+      width: auto;
+      border-right: 1px solid white;
+    }
+
+    .instagram_item img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

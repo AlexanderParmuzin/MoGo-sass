@@ -1,0 +1,60 @@
+@use 'variables' as *;
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include for-tablet-portrait-up {
+    justify-content: center;
+  }
+
+  .services_item {
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
+    position: relative;
+    margin-bottom: 40px;
+
+    @include for-tablet-landscape-up {
+      width: 50%;
+      padding-bottom: 0;
+    }
+
+    @include for-tablet-portrait-up {
+      width: 100%;
+      max-width: 400px;
+      padding-left: 55px;
+      padding-right: 0;
+    }
+
+    .services_item--border {
+      border-bottom: 1px solid $services-item;
+
+      @include for-tablet-landscape-up {
+        border: none;
+      }
+    }
+
+    .services_icon {
+      position: absolute;
+      top: 0;
+      left: 28px;
+      z-index: 1;
+
+      @include for-tablet-portrait-up {
+        left: 0;
+      }
+    }
+
+    .services_title {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: $black;
+      text-transform: uppercase;
+    }
+
+    .services_text {
+      font-size: 15px;
+      color: $grey;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid $white;
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background .3s linear, color .3s linear;
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}

@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.copyright {
+    padding: 20px 0;
+
+    border-top: 1px solid $services-item;
+
+    font-size: 14px;
+    color: $black;
+    text-align: center;
+
+    span {
+        color: $semi-tuna;
+    }
+}

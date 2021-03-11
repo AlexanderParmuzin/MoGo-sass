@@ -1,0 +1,87 @@
+@use 'variables' as *;
+
+.section {
+  padding: 80px 0;
+
+  @include for-tablet-portrait-up {
+    padding: 40px 0;
+  }
+
+  .section_header {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 50px;
+    text-align: center;
+
+    @include for-phone-only {
+      margin-bottom: 50px;
+    }
+
+    .section_suptitle {
+      font-family: $suptitle-font;
+      font-size: 24px;
+      color: $black;
+
+      @include for-phone-only {
+        font-size: 20px;
+      }
+    }
+
+    .section_title {
+      font-size: 30px;
+      font-weight: 700;
+      color: $black;
+      text-transform: uppercase;
+
+      @include for-phone-only {
+        font-size: 24px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        margin: 30px auto;
+        background-color: $semi-tuna;
+
+        @include for-phone-only {
+          margin: 20px auto;
+        }
+      }
+    }
+
+    .section_text {
+      font-size: 15px;
+      color: $grey;
+    }
+  }
+}
+
+.section--devices {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+
+  background: url("../images/devices-bg.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  @include for-tablet-portrait-up {
+    padding-bottom: 0;
+  }
+}
+
+.section--gray {
+  background-color: $section-gray;
+}
+
+.section--clients {
+  background: $section-clients url("../images/clients-bg.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.section--map {
+  padding: 40px 0;
+  background: $section-map url("../images/map-bg.jpg") center no-repeat;
+}

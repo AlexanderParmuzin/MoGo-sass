@@ -1,0 +1,76 @@
+@use 'variables' as *;
+
+.subscribe {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+
+  @include for-phone-only {
+    flex-wrap: wrap;
+    max-width: none;
+  }
+
+  .subscribe_input {
+    width: 60%;
+    height: 40px;
+    padding: 12px;
+    background: $white;
+    border: 1px solid $whatevercolorthisis;
+    border-right: 0;
+
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.1;
+    font-size: 15px;
+    color: #333;
+    font-style: italic;
+    font-weight: 300;
+
+    @include for-phone-only {
+      margin-bottom: 10px;
+      border-right: 1px solid #e7e7e7;
+    }
+
+    &::placeholder {
+      color: $light;
+    }
+
+    &:focus {
+      outline: 0;
+      border-color: $whatarethose;
+    }
+  }
+
+  .subscribe_btn {
+    width: 40%;
+    height: 40px;
+    padding: 12px 30px;
+
+    background-color: $whatarethose;
+    border: 0;
+    cursor: pointer;
+
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.1;
+    font-size: 14px;
+    font-weight: 700;
+    color: $white;
+    text-transform: uppercase;
+
+    transition: background 0.2 linear;
+
+    &:hover {
+      background-color: $whywouldineedsomuch;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .subscribe_input,
+  .subscribe_btn {
+    @include for-phone-only {
+      width: 100%;
+    }
+  }
+}
